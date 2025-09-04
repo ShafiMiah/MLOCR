@@ -15,8 +15,8 @@ You don’t need to install Python or any dependencies to run the software.
 cd pathtolocal\dist
 
 # 5. Run the executable
-Main_ODAI.exe
-
+Main_ODAI.exe 
+```
 
 # Settings
 Go to ~dist\Config path and open settings.xml. 
