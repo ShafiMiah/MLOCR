@@ -7,7 +7,7 @@ You don’t need to install Python or any dependencies to run the software.
 # 1. Go to the dist folder
 #    (e.g., ODAI\dist)
 
-# 2. Copy the dist directory to your local disk
+# 2. Download the dist.zip and extract to your local disk
 
 # 3. Open Command Prompt (or a terminal)
 
