@@ -1,5 +1,8 @@
 # Text recognition using machine learning
 This MLOCR will recognize any text in an image and will extract the text content. It will print the YOLO format label for the co-ordinate of the text in the image. It is also possible to view the classification or text identification result in a viewer. Text region classification can be added manually. I shall show you the step by step procedure how to run the MLOCR using the exe without having headace about code. But I shall describe a little about code.  
+## Requirements
+You need to install Python 3.12.2 or higher. Install torch correct version according to your GPU support. 
+Install all the required packages listed in package.txt. Then run or double click the script CreateExe.sh. It will generate dist folder in your working directory.
 
 ## How to Run the Software
 You don’t need to install Python or any dependencies to run the software. 
@@ -7,7 +10,7 @@ You don’t need to install Python or any dependencies to run the software.
 # 1. Go to the dist folder
 #    (e.g., ODAI\dist)
 
-# 2. Download the dist.zip and extract to your local disk
+# 2. Get the dist and extract to your local disk
 
 # 3. Open Command Prompt (or a terminal)
 
