@@ -14,7 +14,7 @@ You don’t need to install Python or any dependencies to run the software.
 # 4. Navigate to the copied dist folder
 cd pathtolocal\dist
 
-# 5. Run the executable
+# 5. Run the executable and initialize the software
 Main_ODAI.exe --operation init
 ```
 
