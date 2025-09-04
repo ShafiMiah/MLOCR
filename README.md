@@ -47,7 +47,49 @@ Go to ~dist\Config path and open settings.xml. We have following setting
 **Regex:** You can put regex so that you can identify and get the text in the images which you are interested in.
 
 **NumberOfEpoch:** How many epoch YOLOv8 model will run.
-
-
-
-
+# Override settings
+Note that you can always override the settings value by providing the argument when you run the process to complete a certain types of operation. Here are the parameters description.
+```sh
+"--operation",  required=True, help="Type of operation: TransferCSVImage,AutoAnnotation,PredictHotspot"
+"--imagepath",  help="This is the source image path"
+"--trainpath",  help="This is the train image path"
+"--labelpath",  help="This is the train annotation path"
+"--classfile",  help="This is the class list text file"
+"--imagenamescontainerfile",  help="This is contains all the names of images which used for training"
+"--outputpath",  help="This is the path where the prediction annotationa and class will be written"
+"--regex",  help="This will filter out the text with regex"
+"--display", type=str2bool, nargs="?", const=True, default=False, help="Set True or False to show/annotate on viewer"
+```
+# 1. Transfer subset of images for training 
+You can define the csv file which will contain all images names seperated by comma which will be read images from the SourceImageDirectory.
+```sh
+Main_ODAI.exe --operation TransferCSVImage --imagepath "C:\SourceImages" --trainpath "SMLabel\data\images\train" --imagenamescontainerfile "c:\imagenames.csv"
+```
+# 2. Automatically annotate the text area in the image 
+```sh
+Main_ODAI.exe --operation AutoAnnotation  --trainpath "SMLabel\data\images\train" --labelpath "SMLabel\data\labels\train" --classfile "SMLabel\data\predefined_classes.txt"
+```
+# 3. Manually annotate the text region
+Note that a good training dataset will give you highly performant and accurate model. It is better to check if annotation went correctly and annotate the images properly.
+```sh
+Main_ODAI.exe --operation ManualAnnotation  --trainpath "SMLabel\data\images\train" --labelpath "SMLabel\data\labels\train" --classfile "SMLabel\data\predefined_classes.txt"
+```
+# 4. Create a validation set.
+Now, training dataset has been created. The next step is to create a validation dataset.
+```sh
+Main_ODAI.exe --operation CreatevalidationSet  --trainpath "SMLabel\data\images\train" --labelpath "SMLabel\data\labels\train"
+```
+# 4. Start training the text detection ML.
+```sh
+Main_ODAI.exe --operation TrainML  --trainpath "SMLabel\data\images\train" --labelpath "SMLabel\data\labels\train" --classfile "SMLabel\data\predefined_classes.txt"
+```
+# 5. Prediction of HotSpot in the image for identifying text
+The prediction output will be writen in the **OutputDirectory** with the same name of image in YOLO format eg imagetopredict.txt and class number to name presentation in {imagetopredict}classes.txt. Then you can use these 2 file to get the co-ordinate of text hotspot and hotspot name representation.
+```sh
+Main_ODAI.exe --operation PredictHotspot  --imagepath "C:\SourceImages\imagetopredict.jpg" --regex "^\d+[A-Za-z]*$" --display 
+```
+# 6. Single Image Annotation
+Instead of annotating whole folder image manually- you can annotate only a single image manually.
+```sh
+Main_ODAI.exe --operation SingleImageAnnotation  --imagepath "C:\SourceImages\imagetopredict.jpg" --labelpath "SMLabel\data\labels\train" --classfile "SMLabel\data\predefined_classes.txt"
+```
