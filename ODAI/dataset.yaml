@@ -1,0 +1,5 @@
+nc: 1
+train: C:\Data\images\train
+val: C:\Data\images\val
+names:
+  0: Text

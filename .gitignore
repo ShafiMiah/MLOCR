@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/myenv
+/ODAI/build/Main_ODAI
+/ODAI/runs/detect/train
+/ODAI/__pycache__

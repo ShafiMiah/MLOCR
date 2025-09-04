@@ -1,0 +1,163 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>9dd32992-e506-49ee-b8a6-4e5564eff033</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>Main_ODAI.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>ODAI</Name>
+    <RootNamespace>ODAI</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DataPreProcessor.py" />
+    <Compile Include="Extensions\MLMSettings.py" />
+    <Compile Include="Main_ODAI.py" />
+    <Compile Include="OCRToYoloDataset.py" />
+    <Compile Include="SMLabel\MLMAnnotation.py" />
+    <Compile Include="SMLabel\libs\canvas.py" />
+    <Compile Include="SMLabel\libs\colorDialog.py" />
+    <Compile Include="SMLabel\libs\combobox.py" />
+    <Compile Include="SMLabel\libs\constants.py" />
+    <Compile Include="SMLabel\libs\create_ml_io.py" />
+    <Compile Include="SMLabel\libs\default_label_combobox.py" />
+    <Compile Include="SMLabel\libs\hashableQListWidgetItem.py" />
+    <Compile Include="SMLabel\libs\labelDialog.py" />
+    <Compile Include="SMLabel\libs\labelFile.py" />
+    <Compile Include="SMLabel\libs\lightWidget.py" />
+    <Compile Include="SMLabel\libs\pascal_voc_io.py" />
+    <Compile Include="SMLabel\libs\resources.py" />
+    <Compile Include="SMLabel\libs\settings.py" />
+    <Compile Include="SMLabel\libs\shape.py" />
+    <Compile Include="SMLabel\libs\stringBundle.py" />
+    <Compile Include="SMLabel\libs\toolBar.py" />
+    <Compile Include="SMLabel\libs\ustr.py" />
+    <Compile Include="SMLabel\libs\utils.py" />
+    <Compile Include="SMLabel\libs\yolo_io.py" />
+    <Compile Include="SMLabel\libs\zoomWidget.py" />
+    <Compile Include="SMLabel\libs\__init__.py" />
+    <Compile Include="SMLabel\tools\label_to_csv.py" />
+    <Compile Include="TrainML.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\settings.xml" />
+    <Content Include="CreateExe.sh" />
+    <Content Include="Requirement.txt" />
+    <Content Include="SMLabel\data\predefined_classes.txt" />
+    <Content Include="SMLabel\demo\demo.jpg" />
+    <Content Include="SMLabel\demo\demo3.jpg" />
+    <Content Include="SMLabel\demo\demo4.png" />
+    <Content Include="SMLabel\demo\demo5.png" />
+    <Content Include="SMLabel\libs\__pycache__\canvas.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\colorDialog.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\combobox.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\constants.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\create_ml_io.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\default_label_combobox.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\hashableQListWidgetItem.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\labelDialog.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\labelFile.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\lightWidget.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\pascal_voc_io.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\resources.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\settings.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\shape.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\stringBundle.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\toolBar.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\ustr.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\utils.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\yolo_io.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\zoomWidget.cpython-312.pyc" />
+    <Content Include="SMLabel\libs\__pycache__\__init__.cpython-312.pyc" />
+    <Content Include="SMLabel\requirements\requirements.txt" />
+    <Content Include="SMLabel\resources.qrc" />
+    <Content Include="SMLabel\resources\icons\app.icns" />
+    <Content Include="SMLabel\resources\icons\app.png" />
+    <Content Include="SMLabel\resources\icons\app.svg" />
+    <Content Include="SMLabel\resources\icons\cancel.png" />
+    <Content Include="SMLabel\resources\icons\close.png" />
+    <Content Include="SMLabel\resources\icons\color.png" />
+    <Content Include="SMLabel\resources\icons\color_line.png" />
+    <Content Include="SMLabel\resources\icons\copy.png" />
+    <Content Include="SMLabel\resources\icons\delete.png" />
+    <Content Include="SMLabel\resources\icons\done.png" />
+    <Content Include="SMLabel\resources\icons\done.svg" />
+    <Content Include="SMLabel\resources\icons\edit.png" />
+    <Content Include="SMLabel\resources\icons\expert1.png" />
+    <Content Include="SMLabel\resources\icons\expert2.png" />
+    <Content Include="SMLabel\resources\icons\eye.png" />
+    <Content Include="SMLabel\resources\icons\feBlend-icon.png" />
+    <Content Include="SMLabel\resources\icons\file.png" />
+    <Content Include="SMLabel\resources\icons\fit-width.png" />
+    <Content Include="SMLabel\resources\icons\fit-window.png" />
+    <Content Include="SMLabel\resources\icons\fit.png" />
+    <Content Include="SMLabel\resources\icons\format_createml.png" />
+    <Content Include="SMLabel\resources\icons\format_voc.png" />
+    <Content Include="SMLabel\resources\icons\format_yolo.png" />
+    <Content Include="SMLabel\resources\icons\help.png" />
+    <Content Include="SMLabel\resources\icons\labels.png" />
+    <Content Include="SMLabel\resources\icons\labels.svg" />
+    <Content Include="SMLabel\resources\icons\light_brighten.svg" />
+    <Content Include="SMLabel\resources\icons\light_darken.png" />
+    <Content Include="SMLabel\resources\icons\light_darken.svg" />
+    <Content Include="SMLabel\resources\icons\light_lighten.png" />
+    <Content Include="SMLabel\resources\icons\light_reset.png" />
+    <Content Include="SMLabel\resources\icons\light_reset.svg" />
+    <Content Include="SMLabel\resources\icons\new.png" />
+    <Content Include="SMLabel\resources\icons\next.png" />
+    <Content Include="SMLabel\resources\icons\objects.png" />
+    <Content Include="SMLabel\resources\icons\open.png" />
+    <Content Include="SMLabel\resources\icons\open.svg" />
+    <Content Include="SMLabel\resources\icons\prev.png" />
+    <Content Include="SMLabel\resources\icons\quit.png" />
+    <Content Include="SMLabel\resources\icons\resetall.png" />
+    <Content Include="SMLabel\resources\icons\save-as.png" />
+    <Content Include="SMLabel\resources\icons\save-as.svg" />
+    <Content Include="SMLabel\resources\icons\save.png" />
+    <Content Include="SMLabel\resources\icons\save.svg" />
+    <Content Include="SMLabel\resources\icons\undo-cross.png" />
+    <Content Include="SMLabel\resources\icons\undo.png" />
+    <Content Include="SMLabel\resources\icons\verify.png" />
+    <Content Include="SMLabel\resources\icons\zoom-in.png" />
+    <Content Include="SMLabel\resources\icons\zoom-out.png" />
+    <Content Include="SMLabel\resources\icons\zoom.png" />
+    <Content Include="SMLabel\resources\strings\strings-ja-JP.properties" />
+    <Content Include="SMLabel\resources\strings\strings-zh-CN.properties" />
+    <Content Include="SMLabel\resources\strings\strings-zh-TW.properties" />
+    <Content Include="SMLabel\resources\strings\strings.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+    <Folder Include="Config\" />
+    <Folder Include="SMLabel\" />
+    <Folder Include="SMLabel\data\" />
+    <Folder Include="SMLabel\demo\" />
+    <Folder Include="SMLabel\libs\" />
+    <Folder Include="SMLabel\libs\__pycache__\" />
+    <Folder Include="SMLabel\requirements\" />
+    <Folder Include="SMLabel\resources\" />
+    <Folder Include="SMLabel\resources\icons\" />
+    <Folder Include="SMLabel\resources\strings\" />
+    <Folder Include="SMLabel\tools\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

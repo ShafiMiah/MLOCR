@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<settings>
+	<add key="SourceImageDirectory" value="C:\Data\SourceImages" />
+	<add key="IllustrationImageNamesContainerFile" value="C:\Data\images.csv" />
+	<add key="TrainImageDirectory" value="C:\Data\images\train" />
+	<add key="LabelDirectory" value="C:\Data\labels\train" />
+	<add key="ClassFileDirectory" value="SMLabel\data\predefined_classes.txt" />
+	<add key="OutputDirectory" value="C:\Temp" />
+	<add key="Regex" value="^\d+[A-Za-z]*$" />
+<add key="NumberOfEpoch" value="100" /></settings>

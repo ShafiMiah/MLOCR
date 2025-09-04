@@ -1,0 +1,5 @@
+nc: 1
+train: C:\Signifikant\ODAI\MLData\images\train
+val: C:\Signifikant\ODAI\MLData\images\val
+names:
+  0: Text
