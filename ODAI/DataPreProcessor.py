@@ -21,12 +21,12 @@ def GetData():
     for idx, img_name in enumerate(image_names):
         src_path = os.path.join(source_dir, img_name)
         if not os.path.exists(src_path):
-            print(f"⚠️ Skipped: {img_name} not found in {source_dir}")
+            # print(f"⚠️ Skipped: {img_name} not found in {source_dir}")
             continue
 
         ext = os.path.splitext(img_name)[1]
         dest_path = os.path.join(dest_dir, f"{idx}{ext}")
         shutil.copy(src_path, dest_path)
-        print(f"Copied {img_name} → {dest_path}")
+        # print(f"Copied {img_name} → {dest_path}")
 
-    print("✅ Done. All listed images copied and renamed.")
+    # print("✅ Done. All listed images copied and renamed.")

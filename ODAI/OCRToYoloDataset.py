@@ -60,14 +60,14 @@ def YOLODataPreProcessor():
 
         # Save YOLO annotation file
         if lines:
-            print("Label: " +os.path.splitext(img_name)[0])
+            # print("Label: " +os.path.splitext(img_name)[0])
             with open(label_path, "w") as f:
                 f.write("\n".join(lines))
 
 def RemoveSvgFile():
     for file in glob.glob(os.path.join(image_dir, "*.svg")):
         os.remove(file)
-        print(f"Deleted: {file}")
+        # print(f"Deleted: {file}")
 def TrainVal():
     images_path =  MLMSetting.TRAIN_IMAGE_DIRECTORY
     labels_path =  MLMSetting.TRAIN_LABEL_DIRECTORY  # optional if you have labels
@@ -99,5 +99,5 @@ def TrainVal():
         if label_path.exists():
             shutil.copy(label_path, val_labels / f"{img_path.stem}.txt")
 
-    print(f"Validation set created with {len(val_files)} images")
+    # print(f"Validation set created with {len(val_files)} images")
 

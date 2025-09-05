@@ -10,8 +10,8 @@ import re
 def TrainML():
     # Paths
     DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    print(torch.cuda.is_available())
-    print(torch.cuda.get_device_name(0))
+    # print(torch.cuda.is_available())
+    # print(torch.cuda.get_device_name(0))
     training_model_weight  = Path.cwd() /  "Train.pt"
     if os.path.exists(r'runs\detect\train\weights\best.pt'):
         training_model_weight = r'runs\detect\train\weights\best.pt'
